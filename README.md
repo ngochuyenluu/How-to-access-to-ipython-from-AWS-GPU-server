@@ -3,7 +3,7 @@ From my experience, setting up the environment for AWS GPU Deep Learning is quit
 
 Firstly, you need to create an account or sign in to your Amazon account, click EC2 to choose which enviroment you would like to work with: 
 
-![Image1](https://hackernoon.com/keras-with-gpu-on-amazon-ec2-a-step-by-step-instruction-4f90364e49ac)
+![Image1](https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2017/09/13/get-started-dl-2.gif)
 
 With me, because I need GPU for some Kaggle Deep learning challenges so definitely I will choose Deep Learning AMI Ubuntu, or you can choose version Amazon Linux just below to work with, they have the same performances just have some different code to access that I will show you later.
 
@@ -33,7 +33,7 @@ ssh -i <name.pem> ubuntu@<public DNS> #replace the name of your key pair to the 
 
 Continue to expect the permission by typing yes and the server will run. 
 
-![Image8](http://blog.impiyush.com/2015/02/running-ipython-notebook-server-on-aws.html)
+![Image8](https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2017/09/13/get-started-dl-10.gif)
 
 Then start ipython by type ipython in terminal. Next step we need to extract the password to access to ipython by use and don’t forget to save our output because we will use it later.
 
@@ -81,9 +81,13 @@ cd notebook
 
 jupyter notebook
 
-If all the steps are correct, the server will run and give you the link for example http://[your DNS]:8888, replace the number of AWS DNS I have rounded above and you will receive:
+If all the steps are correct, the server will run and give you the link for example http://[your DNS]:8888
 
-![Image9](http://blog.impiyush.com/2015/02/running-ipython-notebook-server-on-aws.html)
+![Image9](https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2017/09/13/get-started-dl-11.gif)
+
+Replace the number of AWS DNS I have rounded above and you will receive:
+
+![Image10](http://blog.impiyush.com/2015/02/running-ipython-notebook-server-on-aws.html)
 
 Don’t worry it’s normal. Click show details and go the file to access to our ipython server. If you have set up a password to your system then permit it to go ahead. If no, click log in to rock on. Congratulation :)
 
