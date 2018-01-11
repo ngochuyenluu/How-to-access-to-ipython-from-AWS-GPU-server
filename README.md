@@ -3,17 +3,15 @@ From my experience, setting up the environment for AWS GPU Deep Learning is quit
 
 Firstly, you need to create an account or sign in to your Amazon account, click EC2 to choose which enviroment you would like to work with: 
 
-![Image1](Screen Shot 2018-01-05 at 15.49.28.png)
+![Image1](https://hackernoon.com/keras-with-gpu-on-amazon-ec2-a-step-by-step-instruction-4f90364e49ac)
 
 With me, because I need GPU for some Kaggle Deep learning challenges so definitely I will choose Deep Learning AMI Ubuntu, or you can choose version Amazon Linux just below to work with, they have the same performances just have some different code to access that I will show you later.
 
-![Image2](Screen Shot 2018-01-05 at 15.50.22.png)
+![Image2](https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2017/09/13/get-started-dl-3.gif)
 
 Then choose GPU compute p2.xlarge to continue, it will cost you 0.9$/hour to use so that’s why I write this resume to help people save a little bit time and money. You should participate in some hackathons to obtain the AWS credits.
 
-![Image3](Screen Shot 2018-01-05 at 15.51.35.png)
-
-![Image4](Screen Shot 2018-01-05 at 15.51.56.png)
+![Image3](https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2017/09/13/get-started-dl-4.gif)
 
 Click “Edit security groups” and add rules to our instances, in particular you need to specify the port range of custom TCP which is used when we access to Jupyter port. You can choose 8888 or change, just do not use the number port is already running.
 
@@ -21,11 +19,11 @@ Click “Edit security groups” and add rules to our instances, in particular y
 
 Then the system will ask you to select the key pair. You can create for first time or reuse the key pair if you already have it. Just remember the key pair should be unique from the pool of names out there. Save the key pair .pem to your directory for example downloads.
 
-![Image6](Screen Shot 2018-01-05 at 17.47.05.png)
+![Image6](https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2017/09/13/get-started-dl-7.gif)
 
 Ok let’s lunch the instance. Pay attention to your public DNS cause we need it to access to our GPU.
 
-![Image7](Screen Shot 2018-01-10 at 22.08.05.png)
+![Image7](https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2017/09/13/get-started-dl-9.gif)
 
 Then the part without image starts, open you terminal. Firstly we need to cd in the directory of your key pair and access to our AWS server. For example:
 
@@ -33,7 +31,11 @@ cd downloads
 
 ssh -i <name.pem> ubuntu@<public DNS> #replace the name of your key pair to the first one and number of public DNS that we mentioned above to the second.
 
-Continue to expect the permission by typing yes and the server will run. Then start ipython by type ipython in terminal. Next step we need to extract the password to access to ipython by use and don’t forget to save our output because we will use it later.
+Continue to expect the permission by typing yes and the server will run. 
+
+![Image8](http://blog.impiyush.com/2015/02/running-ipython-notebook-server-on-aws.html)
+
+Then start ipython by type ipython in terminal. Next step we need to extract the password to access to ipython by use and don’t forget to save our output because we will use it later.
 
 from IPython.lib import passwd
 
@@ -81,7 +83,7 @@ jupyter notebook
 
 If all the steps are correct, the server will run and give you the link for example http://[your DNS]:8888, replace the number of AWS DNS I have rounded above and you will receive:
 
-![Image8](Screen Shot 2018-01-05 at 17.59.01.png)
+![Image9](http://blog.impiyush.com/2015/02/running-ipython-notebook-server-on-aws.html)
 
 Don’t worry it’s normal. Click show details and go the file to access to our ipython server. If you have set up a password to your system then permit it to go ahead. If no, click log in to rock on. Congratulation :)
 
