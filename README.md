@@ -17,7 +17,7 @@ Then choose GPU compute p2.xlarge to continue, it will cost you 0.9$/hour to use
 
 Click “Edit security groups” and add rules to our instances, in particular you need to specify the port range of custom TCP which is used when we access to Jupyter port. You can choose 8888 or change, just do not use the number port is already running.
 
-![Image5](Screen Shot 2018-01-05 at 17.35.27.png)
+![Image5](http://blog.impiyush.com/2015/02/running-ipython-notebook-server-on-aws.html)
 
 Then the system will ask you to select the key pair. You can create for first time or reuse the key pair if you already have it. Just remember the key pair should be unique from the pool of names out there. Save the key pair .pem to your directory for example downloads.
 
